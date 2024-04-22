@@ -2,11 +2,7 @@
     "name": "exp.nats",
     "image": "mcr.microsoft.com/devcontainers/go",
     "features": {
-        "ghcr.io/devcontainers/features/go:1": {},
-        "ghcr.io/devcontainers/features/docker-in-docker:1": {
-            "version": "latest",
-            "moby": true
-        }
+        "ghcr.io/devcontainers/features/go:1": {}
     },
     "customizations": {
 		// Configure properties specific to VS Code.
@@ -17,5 +13,6 @@
 				"GitHub.copilot-chat"
 			]
 		}
-	}
+	},
+    "postCreateCommand": "go install github.com/nats-io/natscli/nats@latest"
 }
