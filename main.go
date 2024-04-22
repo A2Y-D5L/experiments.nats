@@ -84,7 +84,5 @@ func main() {
 	}
 	defer greeter.Stop()
 	slog.Info("Created service: " + greeter.Info().Name + " (" + greeter.Info().ID + ")")
-	for {
-		time.Sleep(time.Second)
-	}
+	time.Sleep(time.Minute)
 }
